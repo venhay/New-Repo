@@ -10,7 +10,7 @@ pipeline {
         stage('welcome to NCR'){
            steps {
                echo 'welcome to all new employees'
-               bat 'echo %venhay%'
+               bat 'echo %Venhay%'
            }
         }
     }
