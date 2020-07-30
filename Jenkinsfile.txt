@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('welcome to NCR'){
+           steps {
+               echo 'welcome to all new employees'
+               bat 'echo %venhay%'
+           }
+        }
+    }
+    post{
+        always{
+            echo 'always block is printed'
+        }
+        success{
+            echo 'success block is printed'
+        }
+        unstable{
+            echo 'unstable block is printed'
+        }
+        failure{
+            echo 'failure block is printed'
+        }
+        changed{
+            echo 'changed block is printed'
+        }
+    }
+}
